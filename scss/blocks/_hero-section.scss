@@ -1,0 +1,154 @@
+.hero-container {
+
+    padding-top: 74px;
+    padding-bottom: 75px;
+
+    .hero__wrapper {
+        display: flex;
+        max-width: 1015px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+
+        @media screen and (max-width:900px) {
+            & {
+                flex-direction: column-reverse;
+            }
+        }
+
+
+        .hero-info {
+
+            max-width: 546px;
+            width: 100%;
+
+
+            @media screen and (max-width:900px) {
+                & {
+                    text-align: center;
+                }
+            }
+
+            h1 {
+                font-family: 'DM Serif Display';
+                font-weight: 400;
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -0.553846px;
+                color: $second-color;
+                margin-bottom: 21px;
+
+
+                @media screen and (max-width:900px) {
+
+                    & {
+                        font-size: 48px;
+                        line-height: 56px;
+                        letter-spacing: -0.369231px;
+                    }
+
+                }
+
+                @media screen and (max-width:550px) {
+                    & {
+                        font-size: 32px;
+                        line-height: 36px;
+                        letter-spacing: -0.246154px;
+                    }
+                }
+            }
+
+            .hero-form {
+                position: relative;
+                display: inline-block;
+
+                @media screen and (max-width:550px) {
+                    & {
+                        position: static;
+                    }
+                }
+
+                #email {
+                    width: 445px;
+                    padding-top: 16px;
+                    padding-bottom: 14px;
+                    padding-left: 27px;
+                    margin-bottom: 16px;
+                    background-color: $third-color;
+                    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+                    border: transparent;
+                    border-radius: 24px;
+
+
+                    @media screen and (max-width:550px) {
+                        & {
+                            width: 327px;
+                        }
+                    }
+                }
+
+                .hero__btn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    @include button;
+
+                    &:hover {
+                        background-color: #DA6D97;
+                    }
+
+                    &:active {
+                        opacity: 50%;
+                    }
+
+                    @media screen and (max-width:550px) {
+                        & {
+                            position: static;
+                            display: block;
+                            max-width: 445px;
+                            width: 100%;
+                            padding-top: 16px;
+                            padding-bottom: 14px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                margin-left: 27px;
+                color: $fifth-color;
+
+
+
+                @media screen and (max-width:900px) {
+                    & {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .hero__img {
+            @media screen and (max-width:900px) {
+                & {
+                    width: 159px;
+                    height: 300px;
+                }
+            }
+
+            @media screen and (max-width:550px) {
+                & {
+                    width: 127px;
+                    height: 239px;
+                }
+            }
+        }
+    }
+
+}

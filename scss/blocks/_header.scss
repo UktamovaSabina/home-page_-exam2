@@ -1,0 +1,117 @@
+.header-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+
+    .header__left {
+
+        display: flex;
+        align-items: center;
+
+        .logo {
+            margin-right: 65px;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 40px;
+
+            @media screen and (max-width:900px) {
+                & {
+                    display: none;
+                }
+            }
+
+            li {
+
+                a {
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $second-color;
+                    opacity: 0.7;
+
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__btn {
+        @include button;
+
+        &:hover {
+            background-color:#DA6D97;
+        }
+
+        &:active {
+            opacity: 50%;
+        }
+    }
+
+
+    .burger {
+        position: relative;
+        width: 28px;
+        height: 3px;
+        background-color: $second-color;
+        cursor: pointer;
+
+        @media screen and (min-width:900px) {
+
+            & {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width:900px) {
+            & {
+                display: block;
+            }
+        }
+        
+
+
+        &::before {
+            position: absolute;
+            top: 7px;
+            content: '';
+            width: 28px;
+            height: 3px;
+            background-color: $second-color;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 7px;
+            content: '';
+            width: 28px;
+            height: 3px;
+            background-color: $second-color;
+        }
+
+        @media screen and (max-width:900px) {
+
+            .burger {
+                display: block;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:900px) {
+
+    .header__btn {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
